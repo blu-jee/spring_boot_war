@@ -9,5 +9,6 @@
 </head>
 <body>
 Spring boot
+${count}
 </body>
 </html>

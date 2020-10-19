@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.boardMapper">
+	<select id="boardCount" resultType="int">
+		select count(*) from test.board
+	</select>
+
+	<select id="getBoardList" resultType="com.example.demo.boardDTO">
+		select * from test.board
+	</select>
+
+	<insert id="savePost" parameterType="com.example.demo.boardDTO">
+		insert into test.board (title, content, password) values (#(title),#(content),#(password))
+	</insert>
+
+</mapper>
